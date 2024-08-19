@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinBuddy - Financial Planning App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FinBuddy</div>
+            <ul>
+                <li><a href="#" class="active" data-page="main">Your Finances</a></li>
+                <li><a href="#" data-page="savings">Savings Plan</a></li>
+            </ul>
+            <button class="subscribe-btn">Subscribe to our newsletter</button>
+        </nav>
+    </header>
+
+    <main id="main-page">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Gain control over your expenses today.</h1>
+                <p>Manage your finances effortlessly with our intuitive financial planner. Set budgets, track expenses, and achieve your savings goals—all in one place.</p>
+                <button class="start-planning-btn">start planning</button>
+                <div class="scroll-indicator">↓</div>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.jpg" alt="People planning finances">
+            </div>
+        </section>
+
+        <section class="financial-summary">
+            <h2>Your financial journey starts here.</h2>
+            <div class="summary-cards">
+                <div class="card income-card">
+                    <h3>Total Income</h3>
+                    <p class="amount">£5,000.00</p>
+                    <p class="trend">35% increase from 7 months</p>
+                    <p class="date" id="current-date"></p>
+                </div>
+                <div class="card expenses-card">
+                    <h3>Total Expenses</h3>
+                    <p class="amount">£2,345</p>
+                    <p class="trend">20% increase from Last month</p>
+                </div>
+                <div class="card savings-card">
+                    <h3>Total Saved</h3>
+                    <p class="amount">£2,655</p>
+                    <p class="trend">Nearing savings goal</p>
+                    <p class="savings-goal"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="financial-input">
+            <h2>Tell us more about your finances</h2>
+            <form id="financial-form">
+                <div class="form-row">
+                    <input type="text" id="location" placeholder="Location">
+                    <input type="number" id="council-tax" placeholder="Council Tax">
+                </div>
+                <div class="form-row">
+                    <input type="number" id="monthly-income" placeholder="What is your monthly income?">
+                    <input type="number" id="rent" placeholder="Rent">
+                </div>
+                <div class="form-row">
+                    <input type="number" id="utility" placeholder="Utility (Gas, Water, Electricity)">
+                    <input type="number" id="insurance" placeholder="Insurance">
+                </div>
+                <div class="form-row">
+                    <input type="number" id="transportation" placeholder="Transportation">
+                    <input type="number" id="groceries" placeholder="Groceries">
+                </div>
+                <div class="form-row">
+                    <input type="number" id="internet" placeholder="Internet Subscription">
+                    <input type="number" id="phone" placeholder="Phone Bill">
+                </div>
+                <button type="submit" class="calculate-btn">Calculate</button>
+            </form>
+        </section>
+
+        <section class="additional-expenses">
+            <h2>Additional Expenses</h2>
+            <form id="new-expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name">
+                <input type="number" id="expense-amount" placeholder="Amount">
+                <button type="submit" class="add-expense-btn">Add Expense</button>
+            </form>
+            <ul id="expense-list"></ul>
+        </section>
+    </main>
+
+    <main id="savings-page" style="display: none;">
+        <section class="savings-hero">
+            <img src="savings-image.jpg" alt="Couple planning for the future">
+            <h1>Plan for the Future, Today.</h1>
+        </section>
+
+        <section class="savings-goal">
+            <div class="goal-card">
+                <h2>Savings Goal</h2>
+                <p class="amount">£45,000.00</p>
+                <p class="plan">12 MONTHS PLAN</p>
+                <p class="monthly-goal">£3750 per month achieve goal</p>
+            </div>
+        </section>
+
+        <section class="set-savings">
+            <h2>Set your savings</h2>
+            <form id="savings-form">
+                <input type="number" id="savings-goal" placeholder="Savings Goal">
+                <input type="number" id="savings-period" placeholder="Savings Period (Months)">
+                <button type="submit" class="set-goal-btn">Set Goal</button>
+            </form>
+            <div id="savings-result"></div>
+            <div id="savings-alert"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

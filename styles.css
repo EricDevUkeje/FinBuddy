@@ -1,0 +1,261 @@
+:root {
+    --primary-color: #6200ea;
+    --secondary-color: #b388ff;
+    --background-color: #1a0033;
+    --text-color: #ffffff;
+    --input-text-color: #5c3c84;
+    --card-background: #2c0052;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--background-color);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Logo with Primary Color */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.subscribe-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Space Grotesk';
+    font-weight: 900;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1; /* Reduced line spacing */
+}
+
+.hero-content p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    padding-right: 3rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+.start-planning-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    font-family: 'Space Grotesk';
+    font-weight: 900;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.scroll-indicator {
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 3rem; /* Adjusted to position below Start Planning Button */
+}
+
+.summary-cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card .amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.card .trend, .card .savings-goal {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.financial-input, .additional-expenses {
+    margin-top: 4rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    font-family: 'Space Grotesk';
+    font-weight: 900;
+    background-color: var(--card-background);
+    color: var(--input-text-color);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    font-family: 'Space Grotesk';
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expense-list li {
+    background-color: var(--card-background);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.savings-hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.savings-hero img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.savings-hero h1 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0;
+}
+
+.goal-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.goal-card .amount {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.goal-card .plan {
+    font-weight: bold;
+}
+
+#savings-result, #savings-alert {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#savings-alert {
+    background-color: #4caf50;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero, .summary-cards, .form-row {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
